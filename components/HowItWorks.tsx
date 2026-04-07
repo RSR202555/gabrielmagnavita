@@ -24,7 +24,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-navy-blue relative overflow-hidden min-h-screen flex items-center" id="atendimento" style={{ scrollMarginTop: "96px", backgroundImage: "url('/mandala-azul-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundBlendMode: "overlay" }}>
+    <section className="bg-white relative overflow-hidden min-h-screen flex items-center" id="atendimento" style={{ scrollMarginTop: "96px" }}>
       <div className="max-w-7xl mx-auto px-6 py-24 w-full">
 
         {/* Header */}
@@ -32,7 +32,7 @@ export default function HowItWorks() {
           <span className="text-golden text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
             Processo
           </span>
-          <h2 className="text-3xl font-bold text-white">
+          <h2 className="text-3xl font-bold text-navy-blue">
             Como Funciona o Atendimento
           </h2>
         </div>
@@ -57,8 +57,8 @@ export default function HowItWorks() {
               </div>
 
               {/* Content */}
-              <h3 className="text-white font-bold text-lg mb-3">{step.label}</h3>
-              <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+              <h3 className="text-navy-blue font-bold text-lg mb-3">{step.label}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{step.description}</p>
 
               {/* Arrow between steps — desktop */}
               {index < steps.length - 1 && (

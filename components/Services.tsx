@@ -28,9 +28,9 @@ const pillars = [
 export default function Services() {
   return (
     <section
-      className="bg-light-gray min-h-screen flex items-center relative overflow-hidden"
+      className="bg-navy-blue min-h-screen flex items-center relative overflow-hidden"
       id="atuacoes"
-      style={{ scrollMarginTop: "96px" }}
+      style={{ scrollMarginTop: "96px", backgroundImage: "url('/mandala-azul-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundBlendMode: "overlay" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-24 w-full">
 
@@ -39,10 +39,10 @@ export default function Services() {
           <span className="text-golden text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
             Atuações
           </span>
-          <h2 className="text-3xl font-bold text-navy-blue mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             A Psicologia Transpessoal
           </h2>
-          <div className="max-w-3xl space-y-4 text-sm text-slate-600 leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm text-white/80 leading-relaxed">
             <p>
               Na minha prática, a Psicologia Transpessoal é o fio condutor que me permite enxergar você
               em sua totalidade. Mais do que focar apenas no alívio imediato de sintomas, essa abordagem
@@ -76,7 +76,7 @@ export default function Services() {
 
         {/* Closing text + CTA */}
         <div className="max-w-3xl">
-          <p className="text-sm text-slate-600 leading-relaxed mb-8">
+          <p className="text-sm text-white/80 leading-relaxed mb-8">
             É um processo focado em quem deseja trilhar um caminho de transformação genuína, respeitando
             seu próprio ritmo e ampliando a percepção sobre si mesmo e sobre o mundo.
           </p>
