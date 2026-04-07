@@ -9,7 +9,7 @@ export default function Footer() {
             <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-8 h-8 object-contain" />
             <div className="leading-none">
               <span className="block font-bold text-navy-blue">Gabriel Magnavita</span>
-              <span className="text-[10px] text-golden uppercase font-bold">
+              <span className="text-[10px] uppercase font-bold" style={{ color: "#1D3F5E" }}>
                 Psicólogo Clínico · CRP-03/15065
               </span>
             </div>
