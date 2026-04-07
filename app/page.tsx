@@ -14,9 +14,9 @@ export default function Home() {
       <main className="pt-20">
         <Hero />
         <Welcome />
+        <About />
         <Services />
         <HowItWorks />
-        <About />
         <Contact />
       </main>
       <Footer />

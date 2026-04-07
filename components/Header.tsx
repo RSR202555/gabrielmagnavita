@@ -74,9 +74,9 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#">Home</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#boas-vindas">Espaço</a>
+          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre">Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atuacoes">Atuações</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atendimento">Atendimento</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre">Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#contato">Contato</a>
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
@@ -113,9 +113,9 @@ export default function Header() {
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#" onClick={() => setMobileOpen(false)}>Home</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#boas-vindas" onClick={() => setMobileOpen(false)}>Espaço</a>
+          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#contato" onClick={() => setMobileOpen(false)}>Contato</a>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
