@@ -1,20 +1,20 @@
 export default function About() {
   return (
     <section
-      className="bg-navy-blue py-24 text-white overflow-hidden relative"
+      className="bg-white text-navy-blue overflow-hidden relative min-h-screen flex items-center"
       id="sobre"
-      style={{ backgroundImage: "url('/mandala-azul-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundBlendMode: "overlay" }}
+      style={{ scrollMarginTop: "96px" }}
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
         <div className="space-y-6">
-          <span className="text-xs font-bold tracking-[0.2em] opacity-70 uppercase">
+          <span className="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">
             Psicólogo Clínico
           </span>
           <h2 className="text-3xl font-bold uppercase tracking-wide">Gabriel Magnavita</h2>
           <span className="block text-golden text-xs font-bold tracking-widest uppercase -mt-2">
             CRP-03/15065
           </span>
-          <div className="space-y-4 text-sm leading-relaxed opacity-90">
+          <div className="space-y-4 text-sm leading-relaxed text-slate-600">
             <p>
               Minha jornada até a clínica foi construída com uma dedicação profunda à compreensão
               do ser humano em todas as suas nuances. Antes de me formar em Psicologia, cursei
@@ -41,7 +41,7 @@ export default function About() {
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               className="bg-golden text-navy-blue px-6 py-2 rounded text-xs font-bold flex items-center gap-2 hover:bg-golden/90 transition-all"
-              href="https://wa.me/5571991827737"
+              href={`https://wa.me/5571991827737?text=${encodeURIComponent("Olá, Gabriel. Conheci o seu site e senti vontade de iniciar meu processo terapêutico. Por favor, me passe as informações sobre os atendimentos, horários e valores para agendar minha sessão online.")}`}
               target="_blank"
               rel="noopener noreferrer"
             >

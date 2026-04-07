@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/logo-mandala.png" type="image/png" />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"

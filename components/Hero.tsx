@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <section className="bg-light-gray overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[600px]">
+    <section className="bg-light-gray overflow-hidden min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center w-full">
         <div className="py-16 lg:py-0">
           <span className="text-sm font-bold text-slate-500 tracking-[0.2em] mb-4 block">
             PSICÓLOGO

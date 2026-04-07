@@ -8,7 +8,7 @@ export default function Contact() {
     email: "",
     phone: "",
     message: "",
-    type: "presencial",
+    type: "online",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -28,11 +28,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-24 bg-white" id="contato">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-navy-blue min-h-screen flex items-center" id="contato" style={{ scrollMarginTop: "96px", backgroundImage: "url('/mandala-azul-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundBlendMode: "overlay" }}>
+      <div className="max-w-7xl mx-auto px-6 py-24 w-full">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-navy-blue mb-4">Entre em Contato</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Entre em Contato</h2>
+          <p className="text-white/70 max-w-2xl mx-auto">
             Pronto para dar o primeiro passo? Entre em contato e agende sua consulta.
           </p>
         </div>
@@ -40,42 +40,33 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-6">Informações de Contato</h3>
+              <h3 className="text-xl font-bold text-white mb-6">Informações de Contato</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-golden rounded flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-white">phone</span>
+                    <span className="material-symbols-outlined text-navy-blue">phone</span>
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 uppercase tracking-wide font-semibold">Telefone / WhatsApp</p>
-                    <p className="text-navy-blue font-semibold">(71) 9 9182-7737</p>
+                    <p className="text-xs text-white/50 uppercase tracking-wide font-semibold">Telefone / WhatsApp</p>
+                    <p className="text-white font-semibold">(71) 9 9182-7737</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-golden rounded flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-white">mail</span>
+                    <span className="material-symbols-outlined text-navy-blue">mail</span>
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 uppercase tracking-wide font-semibold">Email</p>
-                    <p className="text-navy-blue font-semibold">magnavita.gabriel@gmail.com</p>
+                    <p className="text-xs text-white/50 uppercase tracking-wide font-semibold">Email</p>
+                    <p className="text-white font-semibold">magnavita.gabriel@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-golden rounded flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-white">location_on</span>
+                    <span className="material-symbols-outlined text-navy-blue">location_on</span>
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 uppercase tracking-wide font-semibold">Localização</p>
-                    <p className="text-navy-blue font-semibold">São Paulo, SP</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-golden rounded flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-white">schedule</span>
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-400 uppercase tracking-wide font-semibold">Horário</p>
-                    <p className="text-navy-blue font-semibold">Seg–Sex: 8h–18h</p>
+                    <p className="text-xs text-white/50 uppercase tracking-wide font-semibold">Localização</p>
+                    <p className="text-white font-semibold">Salvador, BA</p>
                   </div>
                 </div>
               </div>
@@ -89,10 +80,10 @@ export default function Contact() {
                 <div className="w-16 h-16 bg-golden rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="material-symbols-outlined text-white text-3xl">check</span>
                 </div>
-                <h3 className="text-xl font-bold text-navy-blue mb-2">Mensagem Enviada!</h3>
-                <p className="text-slate-500 text-sm">Entraremos em contato em breve.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Mensagem Enviada!</h3>
+                <p className="text-white/70 text-sm">Entraremos em contato em breve.</p>
                 <button
-                  className="mt-6 text-navy-blue font-semibold text-sm underline"
+                  className="mt-6 text-golden font-semibold text-sm underline"
                   onClick={() => setSubmitted(false)}
                 >
                   Enviar outra mensagem
@@ -101,7 +92,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
                     Nome completo *
                   </label>
                   <input
@@ -116,7 +107,7 @@ export default function Contact() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wide">
+                    <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
                       Email *
                     </label>
                     <input
@@ -130,7 +121,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wide">
+                    <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
                       Telefone
                     </label>
                     <input
@@ -144,7 +135,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
                     Tipo de atendimento
                   </label>
                   <select
@@ -153,13 +144,11 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full border border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-golden focus:ring-1 focus:ring-golden"
                   >
-                    <option value="presencial">Presencial</option>
                     <option value="online">Online / Teleconsulta</option>
-                    <option value="avaliacao">Avaliação Psicológica</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
                     Mensagem
                   </label>
                   <textarea

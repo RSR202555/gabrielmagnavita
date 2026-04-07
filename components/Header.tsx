@@ -34,6 +34,16 @@ const socialLinks = [
     color: "hover:text-[#010101]",
   },
   {
+    label: "Facebook",
+    href: "https://www.facebook.com/psigabrielmagnavita",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+      </svg>
+    ),
+    color: "hover:text-[#1877F2]",
+  },
+  {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/psigabrielmagnavita/",
     icon: (
@@ -63,9 +73,10 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center space-x-8">
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#">Home</a>
+          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#boas-vindas">Espaço</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atuacoes">Atuações</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre">Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atendimento">Atendimento</a>
+          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre">Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#contato">Contato</a>
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
@@ -101,9 +112,10 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#" onClick={() => setMobileOpen(false)}>Home</a>
+          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#boas-vindas" onClick={() => setMobileOpen(false)}>Espaço</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
+          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
           <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#contato" onClick={() => setMobileOpen(false)}>Contato</a>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
