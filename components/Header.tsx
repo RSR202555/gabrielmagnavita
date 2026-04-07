@@ -65,7 +65,7 @@ export default function Header() {
           <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-16 h-16 object-contain" />
           <div className="leading-tight">
             <span className="block font-bold text-navy-blue text-lg">Gabriel Magnavita</span>
-            <span className="block text-[10px] uppercase tracking-widest font-bold" style={{ color: "#1D3F5E" }}>
+            <span className="block text-[10px] uppercase tracking-widest font-bold" style={{ color: "#4A7FA5" }}>
               Psicólogo Clínico · CRP-03/15065
             </span>
           </div>
