@@ -57,27 +57,38 @@ const socialLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const whatsappHref = `https://wa.me/5571991827737?text=${encodeURIComponent("Olá, Gabriel. Conheci o seu site e senti vontade de iniciar meu processo terapêutico. Por favor, me passe as informações sobre os atendimentos, horários e valores para agendar minha sessão online.")}`;
+  const blueBackground = {
+    backgroundImage: "url('/mandala-azul-bg.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundBlendMode: "overlay" as const,
+  };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-16 h-16 object-contain" />
-          <div className="leading-tight">
-            <span className="block font-bold text-navy-blue text-lg">Gabriel Magnavita</span>
-            <span className="block text-[10px] uppercase tracking-widest font-bold" style={{ color: "#4A7FA5" }}>
+    <header
+      className="fixed top-0 w-full z-50 bg-navy-blue border-b border-white/10 shadow-[0_8px_30px_rgba(8,33,74,0.22)]"
+      style={blueBackground}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-4 flex justify-between items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-11 h-11 sm:w-16 sm:h-16 object-contain flex-shrink-0" />
+          <div className="leading-tight min-w-0">
+            <span className="block font-bold text-white text-sm sm:text-lg truncate">Gabriel Magnavita</span>
+            <span className="block text-[8px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-widest font-bold max-w-[11rem] sm:max-w-none leading-tight text-white">
               Psicólogo Clínico · CRP-03/15065
             </span>
           </div>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#">Home</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#boas-vindas">Espaço</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre">Sobre</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atuacoes">Atuações</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atendimento">Atendimento</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#contato">Contato</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#">Home</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#boas-vindas">Espaço</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#sobre">Sobre</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atuacoes">Atuações</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atendimento">Atendimento</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#processo">Processo</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#faq">FAQ</a>
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
               <a
@@ -86,7 +97,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className={`text-gray-400 transition-colors ${s.color}`}
+                className={`text-white transition-colors ${s.color}`}
               >
                 {s.icon}
               </a>
@@ -94,14 +105,16 @@ export default function Header() {
           </div>
           <a
             className="bg-golden text-navy-blue px-6 py-2 rounded text-sm font-bold hover:bg-golden/90 transition-all"
-            href="#contato"
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Agendamento
           </a>
         </nav>
 
         <button
-          className="md:hidden text-navy-blue"
+          className="md:hidden text-white p-2 -mr-2 flex-shrink-0"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -110,13 +123,17 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#" onClick={() => setMobileOpen(false)}>Home</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#boas-vindas" onClick={() => setMobileOpen(false)}>Espaço</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
-          <a className="text-sm font-semibold text-navy-blue hover:text-golden transition-colors" href="#contato" onClick={() => setMobileOpen(false)}>Contato</a>
+        <div
+          className="md:hidden bg-navy-blue border-t border-white/10 px-4 py-4 flex flex-col gap-4 max-h-[calc(100vh-72px)] overflow-y-auto"
+          style={blueBackground}
+        >
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#" onClick={() => setMobileOpen(false)}>Home</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#boas-vindas" onClick={() => setMobileOpen(false)}>Espaço</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#processo" onClick={() => setMobileOpen(false)}>Processo</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#faq" onClick={() => setMobileOpen(false)}>FAQ</a>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
               <a
@@ -125,7 +142,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className={`text-gray-400 transition-colors ${s.color}`}
+                className={`text-white transition-colors ${s.color}`}
               >
                 {s.icon}
               </a>
@@ -133,7 +150,9 @@ export default function Header() {
           </div>
           <a
             className="bg-golden text-navy-blue px-6 py-2 rounded text-sm font-bold text-center"
-            href="#contato"
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
           >
             Agendamento
@@ -143,3 +162,5 @@ export default function Header() {
     </header>
   );
 }
+
+

@@ -5,13 +5,18 @@ import FloatingButtons from "@/components/FloatingButtons";
 export const metadata: Metadata = {
   title: "Gabriel Magnavita | Psicólogo Clínico",
   description:
-    "Gabriel Magnavita - Psicólogo Clínico. Atendimento presencial e online. Avaliação psicológica, psicoterapia individual e acompanhamento especializado.",
+    "Gabriel Magnavita - Psicólogo Clínico. Atendimento online. Cuidado psicológico de qualidade, de onde você estiver. Acompanhamento especializado com total sigilo, ética e presença.",
   keywords:
     "psicólogo, psicologia clínica, psicoterapia, saúde mental, Gabriel Magnavita",
+  icons: {
+    icon: "/logo-mandala.png",
+    shortcut: "/logo-mandala.png",
+    apple: "/logo-mandala.png",
+  },
   openGraph: {
     title: "Gabriel Magnavita | Psicólogo Clínico",
     description:
-      "Atendimento psicológico humanizado, ético e personalizado. Cuide da sua saúde mental.",
+      "Gabriel Magnavita - Psicólogo Clínico. Atendimento online. Cuidado psicológico de qualidade, de onde você estiver. Acompanhamento especializado com total sigilo, ética e presença.",
     type: "website",
     locale: "pt_BR",
   },
@@ -25,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/logo-mandala.png" type="image/png" />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"

@@ -1,16 +1,16 @@
 export default function About() {
   return (
     <section
-      className="bg-white text-navy-blue overflow-hidden relative min-h-screen flex items-center"
+      className="bg-white text-navy-blue overflow-hidden relative md:min-h-screen flex items-center"
       id="sobre"
       style={{ scrollMarginTop: "96px" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center w-full">
         <div className="space-y-6">
           <span className="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">
             Psicólogo Clínico
           </span>
-          <h2 className="text-3xl font-bold uppercase tracking-wide">Gabriel Magnavita</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-wide">Gabriel Magnavita</h2>
           <span className="block text-golden text-xs font-bold tracking-widest uppercase -mt-2">
             CRP-03/15065
           </span>
@@ -38,9 +38,9 @@ export default function About() {
               caminhando ao seu lado para que você assuma o protagonismo da sua própria história.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
             <a
-              className="bg-golden text-navy-blue px-6 py-2 rounded text-xs font-bold flex items-center gap-2 hover:bg-golden/90 transition-all"
+              className="bg-golden text-navy-blue px-6 py-3 rounded text-xs font-bold flex items-center justify-center gap-2 hover:bg-golden/90 transition-all w-full sm:w-auto"
               href={`https://wa.me/5571991827737?text=${encodeURIComponent("Olá, Gabriel. Conheci o seu site e senti vontade de iniciar meu processo terapêutico. Por favor, me passe as informações sobre os atendimentos, horários e valores para agendar minha sessão online.")}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export default function About() {
               AGENDE SUA CONSULTA
             </a>
             <a
-              className="bg-golden text-navy-blue px-6 py-2 rounded text-xs font-bold flex items-center gap-2 hover:bg-golden/90 transition-all"
+              className="bg-golden text-navy-blue px-6 py-3 rounded text-xs font-bold flex items-center justify-center gap-2 hover:bg-golden/90 transition-all w-full sm:w-auto"
               href="https://www.instagram.com/psigabrielmagnavita"
               target="_blank"
               rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function About() {
           </div>
         </div>
         <div className="relative flex justify-center">
-          <div className="relative w-full max-w-sm">
+          <div className="relative w-full max-w-[280px] sm:max-w-sm">
             <img
               alt="Gabriel Magnavita"
               className="w-full rounded-lg shadow-2xl relative z-10 brightness-90 grayscale-[0.2]"

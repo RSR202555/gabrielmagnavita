@@ -4,20 +4,22 @@ import Welcome from "@/components/Welcome";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import OnlineCare from "@/components/OnlineCare";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main className="pt-[72px] md:pt-20">
         <Hero />
         <Welcome />
         <About />
         <Services />
+        <OnlineCare />
         <HowItWorks />
-        <Contact />
+        <FAQ />
       </main>
       <Footer />
     </>

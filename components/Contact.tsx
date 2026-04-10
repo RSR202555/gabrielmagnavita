@@ -28,16 +28,25 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-navy-blue min-h-screen flex items-center" id="contato" style={{ scrollMarginTop: "96px", backgroundImage: "url('/mandala-azul-bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundBlendMode: "overlay" }}>
-      <div className="max-w-7xl mx-auto px-6 py-24 w-full">
+    <section
+      className="bg-navy-blue md:min-h-screen flex items-center relative overflow-hidden"
+      id="contato"
+      style={{
+        scrollMarginTop: "96px",
+        backgroundImage: "url('/mandala-azul-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Entre em Contato</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
+          <p className="text-white/75 max-w-2xl mx-auto">
             Pronto para dar o primeiro passo? Entre em contato e agende sua consulta.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 max-w-5xl mx-auto">
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-bold text-white mb-6">Informações de Contato</h3>
@@ -47,7 +56,9 @@ export default function Contact() {
                     <span className="material-symbols-outlined text-navy-blue">phone</span>
                   </div>
                   <div>
-                    <p className="text-xs text-white/50 uppercase tracking-wide font-semibold">Telefone / WhatsApp</p>
+                    <p className="text-xs text-white/55 uppercase tracking-wide font-semibold">
+                      Telefone / WhatsApp
+                    </p>
                     <p className="text-white font-semibold">(71) 9 9182-7737</p>
                   </div>
                 </div>
@@ -56,7 +67,9 @@ export default function Contact() {
                     <span className="material-symbols-outlined text-navy-blue">mail</span>
                   </div>
                   <div>
-                    <p className="text-xs text-white/50 uppercase tracking-wide font-semibold">Email</p>
+                    <p className="text-xs text-white/55 uppercase tracking-wide font-semibold">
+                      Email
+                    </p>
                     <p className="text-white font-semibold">magnavita.gabriel@gmail.com</p>
                   </div>
                 </div>
@@ -65,7 +78,9 @@ export default function Contact() {
                     <span className="material-symbols-outlined text-navy-blue">location_on</span>
                   </div>
                   <div>
-                    <p className="text-xs text-white/50 uppercase tracking-wide font-semibold">Localização</p>
+                    <p className="text-xs text-white/55 uppercase tracking-wide font-semibold">
+                      Localização
+                    </p>
                     <p className="text-white font-semibold">Salvador, BA</p>
                   </div>
                 </div>
@@ -73,15 +88,14 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Form */}
           <div>
             {submitted ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 bg-golden rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="material-symbols-outlined text-white text-3xl">check</span>
+                  <span className="material-symbols-outlined text-navy-blue text-3xl">check</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Mensagem Enviada!</h3>
-                <p className="text-white/70 text-sm">Entraremos em contato em breve.</p>
+                <p className="text-white/75 text-sm">Entraremos em contato em breve.</p>
                 <button
                   className="mt-6 text-golden font-semibold text-sm underline"
                   onClick={() => setSubmitted(false)}
@@ -92,7 +106,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold text-white/85 mb-1 uppercase tracking-wide">
                     Nome completo *
                   </label>
                   <input
@@ -105,9 +119,9 @@ export default function Contact() {
                     placeholder="Seu nome"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
+                    <label className="block text-xs font-semibold text-white/85 mb-1 uppercase tracking-wide">
                       Email *
                     </label>
                     <input
@@ -121,7 +135,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
+                    <label className="block text-xs font-semibold text-white/85 mb-1 uppercase tracking-wide">
                       Telefone
                     </label>
                     <input
@@ -135,7 +149,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold text-white/85 mb-1 uppercase tracking-wide">
                     Tipo de atendimento
                   </label>
                   <select
@@ -148,7 +162,7 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-white/80 mb-1 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold text-white/85 mb-1 uppercase tracking-wide">
                     Mensagem
                   </label>
                   <textarea
