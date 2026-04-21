@@ -18,13 +18,14 @@ function formatDate(dateStr: string) {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+  const { slug } = await params
   const supabase = await createClient()
   const { data: post } = await supabase
     .from('posts')
     .select('title, excerpt')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .eq('published', true)
     .single()
 
@@ -63,14 +64,15 @@ async function submitComment(formData: FormData): Promise<{ error?: string }> {
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
+  const { slug } = await params
   const supabase = await createClient()
 
   const { data: post } = await supabase
     .from('posts')
     .select('*')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .eq('published', true)
     .single()
 

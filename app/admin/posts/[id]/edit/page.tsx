@@ -4,17 +4,18 @@ import { updatePost } from '../../actions'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
-export default async function EditPostPage({ params }: { params: { id: string } }) {
+export default async function EditPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
   const supabase = await createClient()
   const { data: post } = await supabase
     .from('posts')
     .select('*')
-    .eq('id', params.id)
+    .eq('id', id)
     .single()
 
   if (!post) notFound()
 
-  const action = updatePost.bind(null, params.id)
+  const action = updatePost.bind(null, id)
 
   return (
     <div className="p-8">
