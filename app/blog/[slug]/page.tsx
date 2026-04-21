@@ -88,34 +88,38 @@ export default async function PostPage({
   return (
     <>
       <Header />
-      <main>
-        <section className="bg-navy-blue py-16 px-6 text-center">
+      <main className="bg-white pt-28 md:pt-32">
+        <section className="px-6 pb-8 pt-8 md:pb-10 md:pt-10">
+          <div className="max-w-4xl mx-auto text-center">
           {post.category && (
-            <span className="inline-block font-body text-xs font-semibold text-golden uppercase tracking-wider mb-3">
+              <span className="inline-block font-body text-xs font-semibold text-white bg-navy-blue px-4 py-2 rounded-full uppercase tracking-[0.24em] mb-4 shadow-sm">
               {post.category}
             </span>
           )}
-          <h1 className="font-headline font-bold text-3xl md:text-4xl lg:text-5xl text-white max-w-3xl mx-auto leading-tight">
-            {post.title}
-          </h1>
+            <h1 className="font-headline font-bold text-3xl md:text-4xl lg:text-5xl text-navy-blue max-w-3xl mx-auto leading-tight text-balance">
+              {post.title}
+            </h1>
           {post.published_at && (
-            <p className="font-body text-blue-200 mt-4 text-sm">
-              {formatDate(post.published_at)}
-            </p>
+              <p className="font-body text-gray-500 mt-4 text-sm md:text-base">
+                {formatDate(post.published_at)}
+              </p>
           )}
+          </div>
         </section>
 
         {post.cover_image && (
-          <div className="max-w-3xl mx-auto px-6 -mt-8 relative z-10">
-            <img
-              src={post.cover_image}
-              alt={post.title}
-              className="w-full rounded-2xl shadow-lg object-cover max-h-80"
-            />
+          <div className="max-w-4xl mx-auto px-6 pb-4">
+            <div className="rounded-[2rem] border border-navy-blue/10 bg-white p-3 shadow-[0_18px_50px_rgba(29,63,94,0.12)] md:p-4">
+              <img
+                src={post.cover_image}
+                alt={post.title}
+                className="w-full rounded-[1.5rem] object-contain max-h-[72vh] bg-white"
+              />
+            </div>
           </div>
         )}
 
-        <section className="py-12 px-6">
+        <section className="px-6 py-10 md:py-12">
           <div className="max-w-3xl mx-auto">
             {post.excerpt && (
               <p className="font-body text-gray-500 text-lg italic border-l-4 border-golden pl-4 mb-8">
