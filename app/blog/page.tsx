@@ -70,7 +70,7 @@ export default async function BlogPage() {
                     className="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 hover:-translate-y-1"
                   >
                     {post.cover_image ? (
-                      <div className="relative h-56 overflow-hidden bg-white p-3">
+                      <div className="relative h-52 overflow-hidden bg-white px-3 pb-1 pt-3">
                         <img
                           src={post.cover_image}
                           alt={post.title}
@@ -95,8 +95,8 @@ export default async function BlogPage() {
                       </div>
                     )}
 
-                    <div className="p-6 flex flex-col flex-1">
-                      <h2 className="font-headline font-bold text-navy-blue text-lg leading-snug mb-3 group-hover:text-golden transition-colors duration-200">
+                    <div className="px-5 pb-5 pt-3 flex flex-col flex-1">
+                      <h2 className="font-headline font-bold text-navy-blue text-lg leading-snug mb-2 group-hover:text-golden transition-colors duration-200">
                         {post.title}
                       </h2>
                       {post.excerpt && (
@@ -104,7 +104,7 @@ export default async function BlogPage() {
                           {post.excerpt}
                         </p>
                       )}
-                      <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
+                      <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
                         <span className="font-body text-xs text-gray-400">
                           {post.published_at ? formatDate(post.published_at) : ''}
                         </span>
