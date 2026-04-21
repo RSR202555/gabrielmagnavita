@@ -70,11 +70,11 @@ export default async function BlogPage() {
                     className="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 hover:-translate-y-1"
                   >
                     {post.cover_image ? (
-                      <div className="relative h-48 overflow-hidden">
+                      <div className="relative h-56 overflow-hidden bg-white p-3">
                         <img
                           src={post.cover_image}
                           alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full rounded-xl object-contain group-hover:scale-[1.02] transition-transform duration-500"
                         />
                         {post.category && (
                           <span className="absolute top-3 left-3 bg-navy-blue/90 text-golden text-xs font-body font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
