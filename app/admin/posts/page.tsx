@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import type { Post } from '@/types/blog'
 import Link from 'next/link'
 import { deletePost, togglePublish } from './actions'
+import ConfirmSubmitButton from '@/components/admin/ConfirmSubmitButton'
 
 function formatDate(d: string) {
   return new Date(d).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })
@@ -97,16 +98,13 @@ export default async function PostsPage() {
                         <span className="material-symbols-outlined text-lg">edit</span>
                       </Link>
                       <form action={deletePost.bind(null, post.id)}>
-                        <button
-                          type="submit"
+                        <ConfirmSubmitButton
                           className="p-1.5 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 transition-colors"
                           title="Deletar"
-                          onClick={(e) => {
-                            if (!confirm('Deletar este post?')) e.preventDefault()
-                          }}
+                          message="Deletar este post?"
                         >
                           <span className="material-symbols-outlined text-lg">delete</span>
-                        </button>
+                        </ConfirmSubmitButton>
                       </form>
                     </div>
                   </td>
