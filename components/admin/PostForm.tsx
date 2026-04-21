@@ -49,13 +49,20 @@ export default function PostForm({ post, action, submitLabel = 'Salvar post' }: 
     const file = e.target.files?.[0]
     if (!file) return
     setUploading(true)
+    setError('')
     try {
       const response = await fetch(`/api/upload?filename=${encodeURIComponent(file.name)}`, {
         method: 'POST',
         body: file,
       })
-      const blob = await response.json()
-      if (blob.url) setCoverImage(blob.url)
+      const result = await response.json()
+
+      if (!response.ok) {
+        setError(result.error || 'Falha no upload da imagem.')
+        return
+      }
+
+      if (result.url) setCoverImage(result.url)
       else setError('Falha no upload da imagem.')
     } catch {
       setError('Erro ao fazer upload da imagem.')
