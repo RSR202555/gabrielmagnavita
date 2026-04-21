@@ -107,41 +107,46 @@ export default async function PostPage({
           </div>
         </section>
 
-        {post.cover_image && (
-          <div className="max-w-4xl mx-auto px-6 pb-4">
-            <div className="rounded-[2rem] border border-navy-blue/10 bg-white p-3 shadow-[0_18px_50px_rgba(29,63,94,0.12)] md:p-4">
-              <img
-                src={post.cover_image}
-                alt={post.title}
-                className="w-full rounded-[1.5rem] object-contain max-h-[72vh] bg-white"
-              />
-            </div>
-          </div>
-        )}
-
         <section className="px-6 py-10 md:py-12">
-          <div className="max-w-3xl mx-auto">
-            {post.excerpt && (
-              <p className="font-body text-gray-500 text-lg italic border-l-4 border-golden pl-4 mb-8">
-                {post.excerpt}
-              </p>
-            )}
-            <article className="prose-custom">
-              <MarkdownContent content={post.content} />
-            </article>
-
-            {post.tags && post.tags.length > 0 && (
-              <div className="mt-10 flex flex-wrap gap-2">
-                {post.tags.map((tag: string) => (
-                  <span
-                    key={tag}
-                    className="bg-light-gray text-navy-blue font-body text-xs px-3 py-1 rounded-full"
-                  >
-                    #{tag}
-                  </span>
-                ))}
+          <div
+            className={`mx-auto grid items-start gap-10 ${
+              post.cover_image ? 'max-w-6xl lg:grid-cols-[minmax(320px,0.95fr)_minmax(0,1.05fr)]' : 'max-w-3xl'
+            }`}
+          >
+            {post.cover_image && (
+              <div className="lg:sticky lg:top-32">
+                <div className="rounded-[2rem] border border-navy-blue/10 bg-white p-3 shadow-[0_18px_50px_rgba(29,63,94,0.12)] md:p-4">
+                  <img
+                    src={post.cover_image}
+                    alt={post.title}
+                    className="w-full rounded-[1.5rem] object-contain max-h-[72vh] bg-white"
+                  />
+                </div>
               </div>
             )}
+
+            <div className="min-w-0">
+              {post.excerpt && (
+                <p className="font-body text-gray-500 text-lg italic border-l-4 border-golden pl-4 mb-8">
+                  {post.excerpt}
+                </p>
+              )}
+              <article className="prose-custom">
+                <MarkdownContent content={post.content} />
+              </article>
+              {post.tags && post.tags.length > 0 && (
+                <div className="mt-10 flex flex-wrap gap-2">
+                  {post.tags.map((tag: string) => (
+                    <span
+                      key={tag}
+                      className="bg-light-gray text-navy-blue font-body text-xs px-3 py-1 rounded-full"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
