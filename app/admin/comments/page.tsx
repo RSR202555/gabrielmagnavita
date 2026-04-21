@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import type { Comment } from '@/types/blog'
 import { approveComment, rejectComment, replyToComment } from './actions'
 import ReplyForm from './ReplyForm'
+import ConfirmSubmitButton from '@/components/admin/ConfirmSubmitButton'
 
 function formatDate(d: string) {
   return new Date(d).toLocaleDateString('pt-BR', {
@@ -116,14 +117,13 @@ function CommentCard({
             </form>
           )}
           <form action={rejectComment.bind(null, comment.id)}>
-            <button
-              type="submit"
+            <ConfirmSubmitButton
               className="flex items-center gap-1 text-xs font-body font-semibold bg-red-50 text-red-500 hover:bg-red-100 px-3 py-1.5 rounded-lg transition-colors"
-              onClick={(e) => { if (!confirm('Deletar este comentário?')) e.preventDefault() }}
+              message="Deletar este comentário?"
             >
               <span className="material-symbols-outlined text-sm">delete</span>
               Deletar
-            </button>
+            </ConfirmSubmitButton>
           </form>
         </div>
       </div>
