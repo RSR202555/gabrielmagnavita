@@ -1,23 +1,32 @@
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const blueBackground = {
+    backgroundImage: "url('/mandala-azul-bg.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundBlendMode: "overlay" as const,
+  };
 
   return (
     <footer className="bg-white py-12 border-t border-navy-blue/10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-3">
-            <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-8 h-8 object-contain" />
+      <div
+        className="max-w-7xl mx-auto px-6 sm:px-8 py-6 sm:py-7 bg-navy-blue rounded-[28px]"
+        style={blueBackground}
+      >
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10">
+          <div className="flex items-center gap-4">
+            <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-10 h-10 object-contain" />
             <div className="leading-none">
-              <span className="block font-bold text-navy-blue">Gabriel Magnavita</span>
-              <span className="text-[10px] uppercase font-bold text-navy-blue">
+              <span className="block font-bold text-white text-lg">Gabriel Magnavita</span>
+              <span className="text-[11px] uppercase font-bold text-white">
                 Psicólogo Clínico · CRP-03/15065
               </span>
             </div>
           </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-6 items-center">
             {/* WhatsApp */}
             <a
-              className="text-navy-blue hover:text-[#25D366] transition-colors"
+              className="text-white hover:text-[#25D366] transition-colors"
               href={`https://wa.me/5571991827737?text=${encodeURIComponent("Olá, Gabriel. Conheci o seu site e senti vontade de iniciar meu processo terapêutico. Por favor, me passe as informações sobre os atendimentos, horários e valores para agendar minha sessão online.")}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -29,7 +38,7 @@ export default function Footer() {
             </a>
             {/* Instagram */}
             <a
-              className="text-navy-blue hover:text-[#E1306C] transition-colors"
+              className="text-white hover:text-[#E1306C] transition-colors"
               href="https://www.instagram.com/psigabrielmagnavita"
               target="_blank"
               rel="noopener noreferrer"
@@ -41,7 +50,7 @@ export default function Footer() {
             </a>
             {/* Facebook */}
             <a
-              className="text-navy-blue hover:text-[#1877F2] transition-colors"
+              className="text-white hover:text-[#1877F2] transition-colors"
               href="https://www.facebook.com/psigabrielmagnavita"
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +62,7 @@ export default function Footer() {
             </a>
             {/* TikTok */}
             <a
-              className="text-navy-blue hover:text-slate-500 transition-colors"
+              className="text-white hover:text-slate-300 transition-colors"
               href="https://www.tiktok.com/@psigabrielmagnavita"
               target="_blank"
               rel="noopener noreferrer"
@@ -65,7 +74,7 @@ export default function Footer() {
             </a>
             {/* LinkedIn */}
             <a
-              className="text-navy-blue hover:text-[#0A66C2] transition-colors"
+              className="text-white hover:text-[#0A66C2] transition-colors"
               href="https://www.linkedin.com/in/psigabrielmagnavita/"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +85,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p className="text-xs text-navy-blue">
+          <p className="text-sm text-white">
             © {currentYear} Gabriel Magnavita. Todos os direitos reservados.
           </p>
         </div>

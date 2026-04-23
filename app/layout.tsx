@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "/gabriel-sobre.jpeg",
+        url: "/gabriel-sobre.jpeg?v=2",
         width: 1200,
         height: 630,
         alt: "Gabriel Magnavita",
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/gabriel-sobre.jpeg"],
+    images: ["/gabriel-sobre.jpeg?v=2"],
   },
 };
 
