@@ -36,19 +36,25 @@ export default function FAQ() {
 
   return (
     <section
-      className="bg-light-gray relative overflow-hidden"
+      className="bg-navy-blue relative overflow-hidden"
       id="faq"
-      style={{ scrollMarginTop: "96px" }}
+      style={{
+        scrollMarginTop: "96px",
+        backgroundImage: "url('/mandala-azul-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+      }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span className="text-golden text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
             Perguntas Frequentes
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-navy-blue mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Dúvidas comuns sobre o processo terapêutico
           </h2>
-          <p className="text-slate-500 text-sm leading-relaxed">
+          <p className="text-white/80 text-sm leading-relaxed">
             Reuni aqui respostas objetivas para as perguntas que costumo receber antes do início do acompanhamento.
           </p>
         </div>

@@ -75,20 +75,26 @@ export default function Header() {
           <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-11 h-11 sm:w-16 sm:h-16 object-contain flex-shrink-0" />
           <div className="leading-tight min-w-0">
             <span className="block font-bold text-white text-sm sm:text-lg truncate">Gabriel Magnavita</span>
-            <span className="block text-[8px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-widest font-bold max-w-[11rem] sm:max-w-none leading-tight text-white">
+            <span className="block text-[8px] uppercase tracking-[0.12em] font-bold max-w-[11rem] leading-tight text-white sm:hidden">
               Psicólogo Clínico · CRP-03/15065
+            </span>
+            <span className="hidden sm:block text-[10px] uppercase tracking-widest font-bold leading-tight text-white">
+              Psicólogo Clínico
+            </span>
+            <span className="hidden sm:block text-[10px] uppercase tracking-widest font-bold leading-tight text-white">
+              CRP-03/15065
             </span>
           </div>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#">Home</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#boas-vindas">Espaço</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#sobre">Sobre</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atuacoes">Atuações</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atendimento">Atendimento</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#processo">Processo</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#faq">FAQ</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/">Home</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#boas-vindas">Espaço</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#sobre">Sobre</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atuacoes">Atuações</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atendimento">Atendimento</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#processo">Processo</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#faq">FAQ</a>
           <a className="text-sm font-semibold text-golden hover:text-white transition-colors" href="/blog">Blog</a>
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
@@ -128,13 +134,13 @@ export default function Header() {
           className="md:hidden bg-navy-blue border-t border-white/10 px-4 py-4 flex flex-col gap-4 max-h-[calc(100vh-72px)] overflow-y-auto"
           style={blueBackground}
         >
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#" onClick={() => setMobileOpen(false)}>Home</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#boas-vindas" onClick={() => setMobileOpen(false)}>Espaço</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#processo" onClick={() => setMobileOpen(false)}>Processo</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="#faq" onClick={() => setMobileOpen(false)}>FAQ</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/" onClick={() => setMobileOpen(false)}>Home</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#boas-vindas" onClick={() => setMobileOpen(false)}>Espaço</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#sobre" onClick={() => setMobileOpen(false)}>Sobre</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#processo" onClick={() => setMobileOpen(false)}>Processo</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#faq" onClick={() => setMobileOpen(false)}>FAQ</a>
           <a className="text-sm font-semibold text-golden hover:text-white transition-colors" href="/blog" onClick={() => setMobileOpen(false)}>Blog</a>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
@@ -164,5 +170,3 @@ export default function Header() {
     </header>
   );
 }
-
-

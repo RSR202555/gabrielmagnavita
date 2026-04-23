@@ -7,6 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Footer from "@/components/Footer";
 import OnlineCare from "@/components/OnlineCare";
 import FAQ from "@/components/FAQ";
+import BlogHighlight from "@/components/BlogHighlight";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Services />
         <OnlineCare />
         <HowItWorks />
+        <BlogHighlight />
         <FAQ />
       </main>
       <Footer />

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import FloatingButtons from "@/components/FloatingButtons";
 
-const siteTitle = "Gabriel Magnavita | Psicólogo Clínico";
+const siteTitle = "Gabriel Magnavita - Psicólogo Clínico";
 const siteDescription =
   "Gabriel Magnavita - Psicólogo Clínico. Atendimento online. Cuidado psicológico de qualidade, de onde você estiver. Acompanhamento especializado com total sigilo, ética e presença.";
 
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "/logo-mandala.png",
-        width: 512,
-        height: 512,
-        alt: "Mandala Gabriel Magnavita",
+        url: "/gabriel-sobre.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Gabriel Magnavita",
       },
     ],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: siteTitle,
     description: siteDescription,
-    images: ["/logo-mandala.png"],
+    images: ["/gabriel-sobre.jpeg"],
   },
 };
 
