@@ -154,13 +154,12 @@ export default function BlogHighlight() {
           <div
             className="rounded-[28px] bg-navy-blue text-white p-6 sm:p-8 lg:p-10 relative overflow-hidden"
             style={{
-              backgroundImage:
-                "linear-gradient(rgba(29, 63, 94, 0.95), rgba(29, 63, 94, 0.95)), url('/mandala-azul-bg.png')",
+              backgroundImage: "url('/mandala-azul-bg.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              backgroundBlendMode: "overlay",
             }}
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,196,58,0.18),transparent_32%)]" />
             <div className="relative z-10">
               <span className="inline-flex items-center gap-2 text-golden text-xs font-bold uppercase tracking-[0.2em] mb-5">
                 <EditIcon />
