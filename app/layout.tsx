@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "/gabriel-sobre.jpeg?v=2",
+        url: "/gabriel-whatsapp-preview.jpg?v=3",
         width: 1200,
         height: 630,
         alt: "Gabriel Magnavita",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/gabriel-sobre.jpeg?v=2"],
+    images: ["/gabriel-whatsapp-preview.jpg?v=3"],
   },
 };
 

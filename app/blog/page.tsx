@@ -39,7 +39,7 @@ export default async function BlogPage() {
               Blog
             </h1>
             <p className="font-body text-gray-500 text-base md:text-lg leading-relaxed">
-              Reflexões sobre psicologia transpessoal, saúde mental e autoconhecimento.
+              Reflexões sobre Psicologia, Saúde Mental e Autoconhecimento.
             </p>
           </div>
         </section>
