@@ -94,8 +94,8 @@ export default function Header() {
           <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atuacoes">Atuações</a>
           <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atendimento">Atendimento</a>
           <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#processo">Processo</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#faq">FAQ</a>
           <a className="text-sm font-semibold text-golden hover:text-white transition-colors" href="/blog">Blog</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#faq">FAQ</a>
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
               <a
@@ -140,8 +140,8 @@ export default function Header() {
           <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atuacoes" onClick={() => setMobileOpen(false)}>Atuações</a>
           <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#atendimento" onClick={() => setMobileOpen(false)}>Atendimento</a>
           <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#processo" onClick={() => setMobileOpen(false)}>Processo</a>
-          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#faq" onClick={() => setMobileOpen(false)}>FAQ</a>
           <a className="text-sm font-semibold text-golden hover:text-white transition-colors" href="/blog" onClick={() => setMobileOpen(false)}>Blog</a>
+          <a className="text-sm font-semibold text-white hover:text-golden transition-colors" href="/#faq" onClick={() => setMobileOpen(false)}>FAQ</a>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
               <a
