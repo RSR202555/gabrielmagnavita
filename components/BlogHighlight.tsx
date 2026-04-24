@@ -130,7 +130,7 @@ const pillars: Pillar[] = [
     icon: <BrainIcon />,
     title: "Reflexões acessíveis",
     description:
-      "Textos pensados para aproximar a psicologia do cotidiano com clareza, profundidade e acolhimento.",
+      "Textos pensados para aproximar a PSICOLOGIA do cotidiano com clareza, profundidade e acolhimento.",
   },
   {
     icon: <LotusIcon />,
@@ -167,17 +167,17 @@ export default function BlogHighlight() {
               </span>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight max-w-[14ch]">
-                Um espaco para aprofundar reflexoes e cuidados em saude mental.
+                Um espaço para aprofundar reflexões e cuidados em Saúde Mental.
               </h2>
 
               <div className="mt-6 space-y-4 text-sm sm:text-base text-white/85 leading-relaxed max-w-2xl">
                 <p>
-                  O blog foi criado para ampliar o dialogo sobre psicologia transpessoal,
-                  autoconhecimento e bem-estar emocional de forma sensivel e acessivel.
+                  O blog foi criado para ampliar o dialogo sobre Psicologia,
+                  autoconhecimento e bem-estar emocional de forma sensível e acolhedora.
                 </p>
                 <p>
-                  Ali voce encontra leituras que podem acolher perguntas, provocar novas
-                  percepcoes e fortalecer o seu processo de cuidado fora do consultorio.
+                  Nele você encontra leituras que podem inspirar novas percepções,
+                  provocar questionamentos e fortalecer o seu processo de autocuidado fora da sessão terapêutica.
                 </p>
               </div>
 

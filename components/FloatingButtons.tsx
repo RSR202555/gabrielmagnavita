@@ -1,6 +1,6 @@
 export default function FloatingButtons() {
   return (
-    <div className="fixed z-50 hidden flex-col gap-3 right-6 bottom-6 md:flex">
+    <div className="fixed z-50 flex flex-col gap-2 md:gap-3 right-4 md:right-6 bottom-[calc(env(safe-area-inset-bottom)+20px)] md:bottom-6">
       {/* Instagram */}
       <a
         href="https://www.instagram.com/psigabrielmagnavita"
