@@ -8,22 +8,22 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white py-12 border-t border-navy-blue/10">
+    <footer className="bg-white px-4 py-10 sm:px-6 sm:py-12 border-t border-navy-blue/10">
       <div
-        className="max-w-7xl mx-auto px-6 sm:px-8 py-6 sm:py-7 bg-navy-blue rounded-[28px]"
+        className="max-w-7xl mx-auto px-5 py-7 sm:px-8 sm:py-7 bg-navy-blue rounded-[24px] sm:rounded-[28px]"
         style={blueBackground}
       >
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10">
-          <div className="flex items-center gap-4">
-            <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-10 h-10 object-contain" />
-            <div className="leading-none">
-              <span className="block font-bold text-white text-lg">Gabriel Magnavita</span>
-              <span className="text-[11px] uppercase font-bold text-white">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-7 md:gap-10 text-center md:text-left">
+          <div className="flex items-center justify-center gap-3 sm:gap-4">
+            <img src="/logo-mandala.png" alt="Logo Gabriel Magnavita" className="w-10 h-10 object-contain flex-shrink-0" />
+            <div className="leading-tight">
+              <span className="block font-bold text-white text-xl sm:text-lg">Gabriel Magnavita</span>
+              <span className="block text-[11px] uppercase font-bold text-white">
                 Psicólogo Clínico · CRP-03/15065
               </span>
             </div>
           </div>
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-wrap justify-center gap-7 sm:gap-6 items-center">
             {/* WhatsApp */}
             <a
               className="text-white hover:text-[#25D366] transition-colors"
@@ -85,7 +85,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p className="text-sm text-white">
+          <p className="max-w-xs text-base leading-relaxed text-white sm:max-w-none sm:text-sm">
             © {currentYear} Gabriel Magnavita. Todos os direitos reservados.
           </p>
         </div>
